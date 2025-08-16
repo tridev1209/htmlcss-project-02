@@ -13,7 +13,18 @@ body {
     font-family: "Poppins", sans-serif;
 }
 /* Common */
-
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line-clamp.line-2 {
+    --line-clamp: 2;
+}
+.break-all {
+    word-break: break-all;
+}
 a {
     text-decoration: none;
 }
@@ -27,10 +38,26 @@ a {
     font-weight: 600;
     border-radius: 999px;
     background: #171100;
+
     text-align: center;
 }
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
+}
+.heading {
+    font-family: var(--font-heading);
+    color: #171100;
+    font-weight: 700; /* 117.241% */
+    letter-spacing: -0.02em;
+}
+.heading.lv1 {
+    font-size: 5.8rem;
+    line-height: 1.17em;
+}
+.heading.lv2 {
+    font-size: 3.8rem;
+    line-height: 1.26; /* 126.316% */
 }
 .main-content {
     width: 1170px;
@@ -161,15 +188,7 @@ a {
     width: 52%;
     padding: 64px 0 0 130px;
 }
-.content-block .heading {
-    font-family: var(--font-heading);
-    color: #171100;
-    font-size: 5.8rem;
-    font-weight: 700;
-    line-height: 1.17em; /* 117.241% */
-    letter-spacing: -0.02em;
-    width: 470px;
-}
+
 .content-block .desc {
     margin-top: 22px;
     color: #5f5b53;
@@ -225,4 +244,98 @@ a {
     font-size: 4.4rem;
     font-weight: 700;
     line-height: 1.22; /* 122.727% */
+}
+/* Popular */
+.popular {
+    margin-top: 135px;
+    padding: 65px 0;
+}
+.popular-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popular .desc {
+    width: 458px;
+    margin-top: 16px;
+    color: #5f5b53;
+    font-size: 1.8rem;
+    line-height: 1.67; /* 166.667% */
+}
+.controls-btn {
+    background: transparent;
+    border: none;
+}
+.course-list {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+.course-list .course-item {
+    flex: 1;
+    border-radius: 12px;
+    border: 1px solid #e2dfda;
+    background: #fff;
+}
+.course-list .course-item:hover {
+    border-color: transparent;
+    box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+}
+.course-list .course-item img {
+    width: 100%;
+    height: 278px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+.course-item .info {
+    padding: 16px 22px 22px;
+    width: 370px;
+}
+.course-list .rating,
+.course-item .foot,
+.course-list .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.course-list .rating .star {
+    width: 18px;
+    height: 18px;
+}
+.course-item .sub-title a {
+    padding-right: 6px;
+    color: #171100;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
+}
+.course-item .value {
+    margin-left: 6px;
+    color: #fea31b;
+    font-size: 1.6rem;
+    line-height: 1.75; /* 175% */
+}
+.course-item .desc-short {
+    margin-top: 6px;
+    color: #5f5b53;
+    font-size: 1.4rem;
+    line-height: 1.85; /* 185.714% */
+}
+.course-item .foot {
+    margin-top: 12px;
+}
+.book-btn {
+    border: none;
+}
+.foot .btn:hover {
+    background: var(--primary);
+
+    /* border: var(--primary); */
+}
+.foot .price {
+    color: #171100;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.67; /* 166.667% */
 }

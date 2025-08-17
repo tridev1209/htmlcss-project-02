@@ -551,3 +551,57 @@ a {
     cursor: default;
     background: var(--primary);
 }
+.footer {
+    padding: 96px 135px 0;
+    background: #2e2100;
+}
+.footer .row {
+    display: flex;
+    padding-bottom: 38px;
+    border-bottom: 1px solid #59554b;
+}
+.footer .row .column {
+    width: 21.6%;
+}
+.footer .row .column:first-child {
+    width: 35%;
+}
+.footer .desc {
+    margin: 18px 0;
+    max-width: 267px;
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    line-height: 1.85; /* 185.714% */
+}
+.footer .column .title {
+    display: inline-block;
+    padding: 0 48px 14px 0;
+    border-bottom: 1px solid #59554b;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+
+.footer .column .list {
+    margin-top: 28px;
+}
+.column .list li {
+    margin-top: 12px;
+}
+.column .list a {
+    color: #bfbcb2;
+    font-size: 1.4rem;
+    line-height: 1.85; /* 185.714% */
+}
+.column .list strong {
+    color: #fff;
+    font-weight: 600; /* 185.714% */
+}
+.footer .copy-right p {
+    padding: 28px 0;
+    text-align: center;
+    color: #807d74;
+    font-size: 1.4rem;
+    line-height: 1.85; /* 185.714% */
+}
